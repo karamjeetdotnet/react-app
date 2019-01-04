@@ -1,7 +1,11 @@
 ﻿const path = require("path");
 module.exports = {
-    entry: "./components/index.jsx",
+    entry: "./src/index.jsx",
     mode: "development",
+    devtool: 'cheap-module-eval-source-map',
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
     module: {
         rules: [
             {
