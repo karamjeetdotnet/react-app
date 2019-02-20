@@ -1,26 +1,20 @@
 import React, {Component} from 'react';
 
 export default class CounterApp extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-          counter: 0
-      };
-      this.increment = this.increment.bind(this);
-      this.decrement = this.decrement.bind(this);
-      this.reset = this.reset.bind(this);
-    }
-    increment() {
+    state = {
+        counter: 0
+    };
+    increment = () => {
         this.setState((prevState) => {
             return {counter: prevState.counter + 1}
         });
     }
-    decrement() {
+    decrement = () => {
       this.setState((prevState) => {
           return { counter: prevState.counter - 1 }
       });
     }
-    reset() {
+    reset = () => {
       this.setState(() => {
           return { counter: 0 }
       });

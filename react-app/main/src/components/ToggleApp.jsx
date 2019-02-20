@@ -1,14 +1,10 @@
 import React, {Component} from 'react';
 
 export default class ToggleApp extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            visible: false
-        };
-        this.toggleVisiblePanel = this.toggleVisiblePanel.bind(this);
-    }
-    toggleVisiblePanel() {
+    state = {
+        visible: false
+    };
+    toggleVisiblePanel = () => {
         this.setState((prevState) => {
             return {
                 visible: !prevState.visible

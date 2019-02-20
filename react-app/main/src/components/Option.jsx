@@ -2,13 +2,15 @@ import React from 'react';
 
 const Option = (props) => {
     return (
-        <div>
-            {props.text}
-            <button onClick = {(e)=> {
-                props.onClickDeleteOption(props.text)
-            }}>Remove</button>
+        <div className="option">
+            <p className="option__text">{props.srno}. {props.text}</p>
+            <button
+                className="button button--link"
+                onClick={(e) => {
+                    props.onClickDeleteOption(props.text)
+                }}>Remove</button>
         </div>
-    );    
+    );
 };
 
 export default Option;
